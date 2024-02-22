@@ -35,7 +35,6 @@ func main() {
 				case reaChan <- rea:
 					fmt.Println("value read ", <-rea.resp)
 				}
-				time.Sleep(time.Second * 2)
 			}
 		}()
 	}
@@ -50,4 +49,5 @@ func main() {
 			}
 		}
 	}()
+	time.Sleep(time.Second * 15)
 }
